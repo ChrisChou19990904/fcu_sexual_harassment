@@ -22,10 +22,29 @@
     strong {
       color: #c0392b;
     }
+    #google_translate_element {
+      top: 10px;  /* 距離頁面頂端 10px */
+      left: 10px; /* 距離頁面左側 10px */
+      z-index: 9999; /* 保證它不會被其他元素遮蓋 */
+    }
   </style>
 </head>
 <body>
-
+<div id="google-translate-box">
+  <div id="google_translate_element"></div>
+  <!-- Google Translate 的自動翻譯功能 -->
+  <script type="text/javascript">
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement({
+        pageLanguage: 'zh-TW',  // 頁面原語言
+        includedLanguages: 'en,es,fr,de,it,zh-CN,ja,ko,th,vi,my,id,ms,ar,he,ru,tg,uk,hi,tr,pt,nl,is,fi,sv,no,ro,kk,bo,mn,la,fil,tl,el',  // 支援的翻譯語言（可擴展）
+        layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+      }, 'google_translate_element');
+    }
+  </script>
+  <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+  <p>點擊上方的語言選單以切換語言</p>
+</div>
 <h1>為什麼我們選擇不生育：一場被制度背叛的控訴</h1>
 
 <p>針對逢甲大學這次的性平事件所引發的鬧劇，我只能說：<strong>避重就輕，是人類最根深蒂固的劣根性</strong>。</p>
@@ -38,7 +57,7 @@
 
 <p>現在你該能理解，為什麼越來越多年輕人選擇<strong>丁克</strong>了吧。不是我們不負責任，而是<strong>這個社會太不值得信任</strong>。</p>
 
-<p>當權者一邊打著「為國家」、「為民族」、「少子化危機」的旗號催生，一邊卻對社會制度中的黑洞視而不見時。他們不是真的關心你的孩子是否幸福，只在乎是否還有下一批「韭菜」可以收割。你辛苦養育的孩子，對他們而言，不過是能撐起學貸、房貸、健保財政與遺產稅收的工具而已。</p>
+<p>當權者一邊打著「為國家」、「為民族」、「少子化危機」的旗號催生，一邊卻對社會制度中的黑洞視而不見。他們不是真的關心你的孩子是否幸福，只在乎是否還有下一批「韭菜」可以收割。你辛苦養育的孩子，對他們而言，不過是能撐起學貸、房貸、健保財政與遺產稅收的工具而已。</p>
 <video width="100%" controls><source src="少子化.mp4"></video>
 <p>等你孩子出事了，他們會怎麼做？冷處理、推卸責任、找幾句話官樣文章糊弄過去，然後再轉身對下一個家庭喊出「生育是神聖的義務」。</p>
 <video width="100%" controls><source src="eiyuu.mp4"></video>
